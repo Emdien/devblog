@@ -9,6 +9,7 @@ import BlogEntry from './components/BlogEntry';
 import NotFound from './components/NotFound';
 
 // Styles: here are the styles that App.js makes use of. Global styles.
+import { GlobalStyle } from './GlobalStyle';
 
 const App = () => (
   <Router>
