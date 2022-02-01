@@ -6,7 +6,7 @@ export const Wrapper = styled.div.attrs(() => ({
 
 
     text-decoration: none !important;
-    background-color: #ededed;
+    background-color: #f5f5f5;
 
     -webkit-box-shadow: 0px 6px 9px -1px rgba(0,0,0,0.70); 
     box-shadow: 0px 6px 9px -1px rgba(0,0,0,0.70);
@@ -31,8 +31,8 @@ export const Wrapper = styled.div.attrs(() => ({
                     transform: translateY(0);
         }
         100% {
-            -webkit-transform: translateY(100px);
-                    transform: translateY(100px);
+            -webkit-transform: translateY(50px);
+                    transform: translateY(50px);
         }
     }
     @keyframes slide-bottom {
@@ -41,8 +41,8 @@ export const Wrapper = styled.div.attrs(() => ({
                     transform: translateY(0);
         }
         100% {
-            -webkit-transform: translateY(100px);
-                    transform: translateY(100px);
+            -webkit-transform: translateY(50px);
+                    transform: translateY(50px);
         }
     }
 
@@ -60,4 +60,15 @@ export const Wrapper = styled.div.attrs(() => ({
 export const Content = styled.div`
     padding: 20px;
     max-width: 100%;
+    
+    h1 {
+        color: var(--darkGrey);
+        text-align: justify;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight:600;
+        text-align: justify;
+    }
 `;
