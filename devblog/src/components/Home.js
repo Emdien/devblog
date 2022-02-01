@@ -18,7 +18,6 @@ import HomeHeader from './HomeHeader';
 import CardList from './CardList';
 
 /* Miscelanous components */
-import SearchBar from './SearchBar';
 import Spinner from './Spinner';
 
 // Hooks
@@ -46,12 +45,8 @@ const Home = () => {
     return (
         <>
             <HomeHeader className='mb-5'/>
-
-            <Container className='mt-5'>
                 
-                <SearchBar />
-
-            </Container>
+            <CardList />
         </>
         
 
