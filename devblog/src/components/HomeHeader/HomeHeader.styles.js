@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div.attrs(() => ({
-    className: 'container',
+    className: 'container border',
 }))`
 
 
     text-decoration: none !important;
+    background-color: #ededed;
 
     -webkit-box-shadow: 0px 6px 9px -1px rgba(0,0,0,0.93); 
     box-shadow: 0px 6px 9px -1px rgba(0,0,0,0.93);
@@ -45,4 +46,9 @@ export const Wrapper = styled.div.attrs(() => ({
         }
     }
 
+`;
+
+export const Content = styled.div`
+    padding: 20px;
+    max-width: 100%;
 `;
