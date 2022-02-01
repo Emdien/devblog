@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Container from 'react-bootstrap/Container';
 // Config
 
 // Components
@@ -44,7 +44,17 @@ import NoImage from '../images/placeholder.jpg';
 const Home = () => {
 
     return (
-        <HomeHeader />
+        <>
+            <HomeHeader className='mb-5'/>
+
+            <Container className='mt-5'>
+                
+                <SearchBar />
+
+            </Container>
+        </>
+        
+
     );
 }
 
