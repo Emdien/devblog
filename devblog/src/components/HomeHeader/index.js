@@ -14,9 +14,9 @@ const HomeHeader = () => (
                 <Col xs={12} md={4} className="align-self-center text-center">
                     <Image src={Pfp} className="img-fluid rounded-circle" />
                 </Col>
-                <Col xs={12} md={8} className="pt-5">
+                <Col xs={12} md={8} className="align-self-center">
                     <h1>¡Hola!</h1>
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et vulputate neque. Cras massa massa, dapibus porta ex eget, convallis gravida erat. Suspendisse potenti. Vivamus venenatis libero in eros commodo, eu dictum est venenatis. Vivamus rhoncus ex diam, id tincidunt ex mollis eu.</h2>
+                    <h2>(Temp.)Me llamo Gonzalo, aunque se me conoce más como Emdien o MdN. Soy un graduado en Ingeniería del Software, y este es mi blog donde escribo cualquier cosa que se me pasa por la cabeza.</h2>
                 </Col>
             </Row>
         </Content>

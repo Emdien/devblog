@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Container from 'react-bootstrap/Container';
 // Config
 
 // Components
@@ -18,7 +18,6 @@ import HomeHeader from './HomeHeader';
 import CardList from './CardList';
 
 /* Miscelanous components */
-import SearchBar from './SearchBar';
 import Spinner from './Spinner';
 
 // Hooks
@@ -44,7 +43,13 @@ import NoImage from '../images/placeholder.jpg';
 const Home = () => {
 
     return (
-        <HomeHeader />
+        <>
+            <HomeHeader className='mb-5'/>
+                
+            <CardList />
+        </>
+        
+
     );
 }
 
