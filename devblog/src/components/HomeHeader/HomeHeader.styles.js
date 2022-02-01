@@ -8,8 +8,8 @@ export const Wrapper = styled.div.attrs(() => ({
     text-decoration: none !important;
     background-color: #ededed;
 
-    -webkit-box-shadow: 0px 6px 9px -1px rgba(0,0,0,0.93); 
-    box-shadow: 0px 6px 9px -1px rgba(0,0,0,0.93);
+    -webkit-box-shadow: 0px 6px 9px -1px rgba(0,0,0,0.70); 
+    box-shadow: 0px 6px 9px -1px rgba(0,0,0,0.70);
     -webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
