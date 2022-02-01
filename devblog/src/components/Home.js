@@ -24,10 +24,10 @@ import Spinner from './Spinner';
 // Hooks
 
 // Images
-import NoImage from '../images/ef3-placeholder-image.jpg';
+import NoImage from '../images/placeholder.jpg';
 
 // Main Component
-const Home = () => {
+/*const Home = () => {
 
     return (
         <>
@@ -38,6 +38,13 @@ const Home = () => {
             <CardList />
 
         </>
+    );
+}*/
+
+const Home = () => {
+
+    return (
+        <HomeHeader />
     );
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 // Routing
-import { BrowserRouter as Router, Routes, Router} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 // Components: here are the components that App.js makes use of
 import Header from './components/Header';
@@ -9,8 +9,9 @@ import BlogEntry from './components/BlogEntry';
 import NotFound from './components/NotFound';
 
 // Styles: here are the styles that App.js makes use of. Global styles.
+import { GlobalStyle } from './GlobalStyle';
 
-const App = () => (
+/*const App = () => (
   <Router>
     <Header />
     <Routes>
@@ -19,6 +20,17 @@ const App = () => (
       <Route path='/*' element={<NotFound />} />
     </Routes>
   </Router>
+)*/
+
+const App = () => (
+  <Router>
+    <Header />
+    <Routes>
+      <Route path='/' element={<Home />} />
+    </Routes>
+    <GlobalStyle />
+  </Router>
 )
+
 
 export default App;
