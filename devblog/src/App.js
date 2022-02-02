@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import BlogEntry from './components/BlogEntry';
 import NotFound from './components/NotFound';
+import Footer from './components/Footer'
 
 // Styles: here are the styles that App.js makes use of. Global styles.
 import { GlobalStyle } from './GlobalStyle';
@@ -24,10 +25,13 @@ import { GlobalStyle } from './GlobalStyle';
 
 const App = () => (
   <Router>
-    <Header />
-    <Routes>
-      <Route path='/' element={<Home />} />
-    </Routes>
+    <div className='main-content d-flex flex-column min-vh-100'>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
+    </div>
+    <Footer />
     <GlobalStyle />
   </Router>
 )
