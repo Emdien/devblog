@@ -13,7 +13,6 @@ import Footer from './components/Footer'
 import { GlobalStyle } from './GlobalStyle';
 
 /*const App = () => (
-  
   <Router>
     <Header />
     <Routes>
