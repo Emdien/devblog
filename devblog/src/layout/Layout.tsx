@@ -1,5 +1,7 @@
 import React from "react";
 import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
+import styles from './Layout.module.scss';
 
 
 interface LayoutProps {
@@ -11,6 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
         <>
             <Header />
             <div>{children}</div>
+            <Footer />
         </>
     );
 };
