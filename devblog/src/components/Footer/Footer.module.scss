@@ -4,8 +4,37 @@
     width: 100%;
     height: 100px;            /* Footer height */
     background-color: black;
+    display: flex;
+    justify-content: center;
+    font-family: 'Signika', sans-serif;
+    box-sizing: border-box;
 }
 
 .content {
     color: white;
+    margin: 0 64px;
+    min-width: 0;
+    max-width: 1192px;
+    width: 100%;
+    box-sizing: inherit;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.text {
+    margin-bottom: 10px;
+}
+
+.socialGithub {
+    margin-right: 20px;
 }
