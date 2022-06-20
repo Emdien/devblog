@@ -5,6 +5,8 @@
     justify-content: center;
     box-sizing: border-box;
     font-family: 'Signika', sans-serif;
+    position: sticky;
+    top: 0;
 }
 
 .content {
@@ -25,14 +27,11 @@
         text-decoration: none;
         color: white;
     }
-
-    
 }
 
 .logo {
     text-align: center;
     font-size: 48px;
-    
     transition: transform .2s ease-in-out;
     
 }
@@ -41,11 +40,9 @@
     transform: scale(1.03)
 }
 
-
 .hBlock {
     flex: 1 0 auto;
 }
-
 
 .settingsContainer {
     align-items: center;
@@ -65,10 +62,8 @@
         flex-direction: row;
         margin: 0 15px;
         border: solid 2px;
-
         transition: transform .3s ease-in-out;
     }
-
 
     button:hover {
         transform: scale(1.05)

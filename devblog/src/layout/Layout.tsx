@@ -11,9 +11,11 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
     return (
         <>
-            <Header />
-            <div>{children}</div>
-            <Footer />
+            <div className={styles.wrapper}>
+                <Header />
+                <div className={styles.bodyWrap}>{children}</div>
+                <Footer />
+            </div>
         </>
     );
 };
