@@ -13,7 +13,11 @@ const Layout = ({ children }: LayoutProps) => {
         <>
             <div className={styles.wrapper}>
                 <Header />
-                <div className={styles.bodyWrap}>{children}</div>
+                <div className={styles.bodyWrapper}>
+                    <div className={styles.bodyContent}>
+                        {children}
+                    </div>
+                </div>
                 <Footer />
             </div>
         </>

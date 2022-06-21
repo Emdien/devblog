@@ -1,9 +1,25 @@
 .wrapper {
     position: relative;
     min-height: 100vh;
+    background-color: #d1d1d1;
 }
 
 .bodyWrapper {
     padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.bodyContent {
+    margin: 10px 64px;
+    min-width: 0;
+    max-width: 1192px;
+    width: 100%;
+    box-sizing: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee;
 }
 
