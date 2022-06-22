@@ -1,7 +1,7 @@
 .wrapper {
     position: relative;
     min-height: 100vh;
-    background-color: #d1d1d1;
+    background-color: var(--background);
 }
 
 .bodyWrapper {
@@ -20,6 +20,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #eee;
+    background-color: var(--content-level-1);
+    color: var(--text-primary);
 }
 

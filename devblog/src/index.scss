@@ -1,0 +1,20 @@
+
+:root {
+    --background: #dedede;
+    --text-primary: black;
+    --text-secondary: white;
+    --header-footer: #212121;
+    --body-content: white;
+    --content-level-1: #c4c4c4;
+    --content-level-2: #cfcfcf;
+}
+
+[data-theme='dark'] {
+    --background: #212121;
+    --text-primary: white;
+    --text-secondary: white;
+    --header-footer: black;
+    --body-content: white;
+    --content-level-1: #171717;
+    --content-level-2: #262626; 
+}    

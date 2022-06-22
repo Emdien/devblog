@@ -2,6 +2,7 @@ import React from "react";
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import styles from './Layout.module.scss';
+import LayoutController from "./Layout.controller";
 
 
 interface LayoutProps {
@@ -9,18 +10,19 @@ interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
+    
+    const { theme, switchTheme } = LayoutController();
+
     return (
-        <>
-            <div className={styles.wrapper}>
-                <Header />
-                <div className={styles.bodyWrapper}>
-                    <div className={styles.bodyContent}>
-                        {children}
-                    </div>
+        <div className={styles.wrapper} data-theme={theme}>
+            <Header theme={theme} handleTheme={switchTheme} />
+            <div className={styles.bodyWrapper}>
+                <div className={styles.bodyContent}>
+                    {children}
                 </div>
-                <Footer />
             </div>
-        </>
+            <Footer />
+        </div>
     );
 };
 

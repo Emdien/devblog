@@ -1,10 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
-import theme from '../../images/theme-light-dark-1.svg'
+import themeImg from '../../images/theme-light-dark-1.svg'
 import user from '../../images/User_font_awesome.svg'
+import { HeaderProps } from './Header.types';
 
-const Header = () => {
+const Header = ({ theme, handleTheme }: HeaderProps) => {
+
+
+    const test = () => {
+        console.log('test')
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.content}>
@@ -18,8 +25,8 @@ const Header = () => {
                 <div className={styles.hBlock} />
 
                 <div className={styles.settingsContainer}>
-                    <button className={styles.theme}>
-                        <img src={theme} width='30' height='30' alt="" />
+                    <button className={styles.theme} onClick={handleTheme}>
+                        <img src={themeImg} width='30' height='30' alt="" />
                     </button>
 
                     <button className={styles.login}>
