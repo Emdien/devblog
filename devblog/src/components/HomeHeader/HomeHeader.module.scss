@@ -1,0 +1,68 @@
+.container {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template: 'logo about about';
+    width: 100%;
+}
+
+.logoContainer {
+    grid-area: logo;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    border-radius: 50%;
+    -webkit-box-shadow: 9px 11px 18px -3px rgba(0,0,0,0.33); 
+    box-shadow: 9px 11px 18px -3px rgba(0,0,0,0.33);
+    max-width: 300px;
+
+}
+
+.about {
+    grid-area: about;
+    padding: 20px 20px 20px 20px;
+    max-width: 600px;
+
+}
+
+// TODO: Fix div sizes for phone screens. Logo div takes too much height
+// Style learn more button
+
+
+.aboutContent {
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    overflow-wrap: anywhere;
+}
+
+.aboutHeader {
+    font-size: 40px;
+    padding: 10px 0;
+}
+
+.aboutText {
+    font-size: 22px;
+}
+
+.learnMore{
+    margin-top: 30px;
+}
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 'logo logo logo'
+        'about about about';
+    }
+
+    .logo {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
