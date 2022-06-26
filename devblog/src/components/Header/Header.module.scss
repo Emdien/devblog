@@ -70,4 +70,44 @@
     }
 }
 
+.uncheckedIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 15;
+    color: var(--header-footer);
+    padding-right: 2;
+}
+
+.checkedIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 15;
+    color: white;
+    padding-right: 2;
+}
+
+.uncheckedHandle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 15;
+    color: #e3a917;
+    padding-right: 2;
+}
+
+.checkedHandle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 15;
+    color: purple;
+    padding-right: 2;
+}
+
 
