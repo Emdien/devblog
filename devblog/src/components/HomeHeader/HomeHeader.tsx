@@ -21,7 +21,7 @@ const HomeHeader = () => {
                         <p className={styles.aboutText}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam dolorem odit, dolore ipsam delectus exercitationem dicta itaque neque magni, quis tenetur fuga ipsa vitae eligendi, aperiam possimus recusandae accusamus sint.</p>
                     </div>
                     <div className={styles.learnMore}>
-                        <button>Leer más</button>
+                        <button className={styles.learnBtn}>Leer más</button>
                     </div>
                 </div>
             </div>

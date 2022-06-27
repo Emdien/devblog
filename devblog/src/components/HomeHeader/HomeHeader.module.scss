@@ -30,7 +30,6 @@
 }
 
 // TODO: Fix div sizes for phone screens. Logo div takes too much height
-// Style learn more button
 
 
 .aboutContent {
@@ -53,6 +52,22 @@
     margin-top: 30px;
 }
 
+.learnBtn {
+    background-color: var(--content-level-1);
+    font-size: 22px;
+    color: var(--text-primary);
+    font-family: 'Signika', sans-serif;
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    text-decoration: underline;
+}
+
+.learnBtn:hover {
+    background-color: var(--btn-l1-hover);
+
+}
+
 @media (max-width: 900px) {
     .container {
         grid-template-rows: repeat(2, 1fr);
@@ -60,9 +75,23 @@
         'about about about';
     }
 
+    .about {
+        margin: auto;
+    }
+
+    .aboutHeader {
+        text-align: center;
+    }
+
     .logo {
         width: 100%;
         height: auto;
         display: block;
     }
+
+    .learnMore {
+        display: flex;
+        justify-content: center;
+    }
+    
 }
