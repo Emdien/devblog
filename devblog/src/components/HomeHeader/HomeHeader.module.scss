@@ -4,6 +4,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template: 'logo about about';
     width: 100%;
+    background-color: var(--content-level-1);
 }
 
 .logoContainer {

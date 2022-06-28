@@ -1,18 +1,17 @@
 import React from "react";
 import styles from './HomeHeader.module.scss';
-import Profile from '../../images/reze.png'
 
-const HomeHeader = () => {
+interface HomeHeaderProps {
+    avatar: string
+}
 
-
-    // TODO: Hardcoded URL for avatar. Should do an API request  to grab it instead.
-    // Ideally it would be cached aswell to prevent API request spam
+const HomeHeader = ({avatar}: HomeHeaderProps) => {
 
     return (
         <>
             <div className={styles.container}>
                 <div className={styles.logoContainer}>
-                    <img className={styles.logo} src="https://avatars.githubusercontent.com/u/56626660?v=4" alt="Profile" />
+                    <img className={styles.logo} src={avatar} alt="Profile" />
                 </div>
 
                 <div className={styles.about}>
