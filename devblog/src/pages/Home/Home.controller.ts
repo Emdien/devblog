@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 const HomeController = () => {
 
     const [avatar, setAvatar] = useState("")
+    const [ searchText, setSearchText ] = useState('');
 
     const fetchData = () => {
         return fetch('https://api.github.com/users/Emdien')
@@ -14,7 +15,7 @@ const HomeController = () => {
         fetchData()
     }, [])
 
-    return { avatar }
+    return { avatar, searchText, setSearchText }
 }
 
 export default HomeController;
