@@ -1,10 +1,40 @@
 import React from "react";
+import BlogCard from "./BlogCard/BlogCard";
 import styles from './CardList.module.scss';
 
-const CardList = () => {
+
+interface CardListProps {
+    filter: string;
+}
+
+const data = {
+
+    data: {
+        slug: 'entry',
+        title: 'Titulo de la entrada',
+        intro: 'Introducción de la entrada',
+        date: 'Fecha de la entrada',
+        img: 'src de la imagen',
+        link: 'enlace a la entrada'
+    }, 
+    content: 'Contenido'
+}
+
+const CardList = ({ filter }: CardListProps) => {
     return (
-        <>
-        </>
+        <div className={styles.container}>
+            <h2 className={styles.header}>Entradas del blog</h2>
+
+            {filter}
+
+            {
+                // NOTES: Here it should map an array of blog cards based on filtered titles
+                // If there is not filter on the searchbar, show pages of 10 cards each or something
+                // Need to implement pagination
+            }
+
+            <BlogCard entryData={data}/>
+        </div>
     );
 };
 
