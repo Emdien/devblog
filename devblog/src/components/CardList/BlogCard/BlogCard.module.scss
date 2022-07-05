@@ -1,0 +1,43 @@
+.container {
+
+}
+
+.content {
+    display: grid;
+    height: 600px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 'logo logo logo'
+    'info info info';
+
+    text-decoration: none;
+    color: var(--text-primary);
+    margin: 15px;
+
+}
+
+.content:hover {
+    background-color: var(--content-level-1);
+}
+
+.thumbnailContainer {
+    grid-area: logo;
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+}
+
+.entryInfo {
+    grid-area: info;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+
+

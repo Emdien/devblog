@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    width: 100%;
+    background-color: var(--content-level-3);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.header {
+    font-size: 32px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}

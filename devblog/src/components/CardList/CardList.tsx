@@ -33,7 +33,12 @@ const CardList = ({ filter }: CardListProps) => {
                 // Need to implement pagination
             }
 
-            <BlogCard entryData={data}/>
+            <div className={styles.cards}>
+                <BlogCard entryData={data}/>
+                <BlogCard entryData={data}/>
+                <BlogCard entryData={data}/>
+                <BlogCard entryData={data}/>
+            </div>
         </div>
     );
 };
