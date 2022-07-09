@@ -11,9 +11,9 @@ const data = {
 
     data: {
         slug: 'entry',
-        title: 'Titulo de la entrada',
-        intro: 'Introducción de la entrada',
-        date: 'Fecha de la entrada',
+        title: 'Making off del devblog',
+        intro: '¿Que tecnologías se han utilizado? ¿Qué pasos se han seguido para desarrollar la página? ¿Qué problemas me he enfrentado?',
+        date: '09 Jul 2022',
         img: 'src de la imagen',
         link: 'enlace a la entrada'
     }, 

@@ -23,6 +23,9 @@ const BlogCard = ({ entryData }: BlogCardProps) => {
         <div className={styles.container}>
             <Link className={styles.content} to={"/entries/"+ entryData.data.slug}>
                 <div className={styles.thumbnailContainer}>
+                    {
+                        // NOTE: Important to note that ideally the banner image is 300x150px to not reescale
+                    }
                     <img className={styles.thumbnail} src={placeholder} alt="" />
                 </div>
                 <div className={styles.entryInfo}>
