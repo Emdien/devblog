@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef} from "react";
 import BlogCard from "./BlogCard/BlogCard";
+import CardListController from "./CardList.controller";
 import styles from './CardList.module.scss';
 
 
@@ -7,7 +8,7 @@ interface CardListProps {
     filter: string;
 }
 
-const data = {
+/*const data = {
 
     data: {
         slug: 'entry',
@@ -18,14 +19,26 @@ const data = {
         link: 'enlace a la entrada'
     }, 
     content: 'Contenido'
-}
+}*/
 
 const CardList = ({ filter }: CardListProps) => {
+
+    const { getMarkdownContents, getMatter, entries, setEntries } = CardListController();
+
+    // React 18 Strict mode fuckery
+    const loadEntries = useRef(true);
+    useEffect(() => {
+        if(loadEntries.current){
+            getMarkdownContents()
+            loadEntries.current = false
+        }
+    }, [])
+
     return (
         <div className={styles.container}>
             <h2 className={styles.header}>Entradas del blog</h2>
 
-            {filter}
+            {entries}
 
             {
                 // NOTES: Here it should map an array of blog cards based on filtered titles
@@ -33,12 +46,11 @@ const CardList = ({ filter }: CardListProps) => {
                 // Need to implement pagination
             }
 
-            <div className={styles.cards}>
-                <BlogCard entryData={data}/>
-                <BlogCard entryData={data}/>
-                <BlogCard entryData={data}/>
-                <BlogCard entryData={data}/>
-            </div>
+            {// entries.map(entry => (
+             //   <></>
+            //))
+            }
+
         </div>
     );
 };
