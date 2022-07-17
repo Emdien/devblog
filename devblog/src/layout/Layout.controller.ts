@@ -6,8 +6,6 @@ const LayoutController = () => {
     const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
 
     const switchTheme = () => {
-
-        console.log('activated theme')
         const newTheme = theme === 'light' ? 'dark' : 'light';
         setTheme(newTheme);
     };

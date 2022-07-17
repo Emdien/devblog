@@ -52,6 +52,7 @@
 
 .learnMore{
     margin-top: 30px;
+    
 }
 
 .learnBtn {
@@ -63,10 +64,13 @@
     border-radius: 7px;
     border: none;
     text-decoration: underline;
+    transition: background 0.5s ease, color 0.5s ease;
+    
 }
 
 .learnBtn:hover {
     background-color: var(--hover-bg);
+    transition: 0.1s;
 
 }
 

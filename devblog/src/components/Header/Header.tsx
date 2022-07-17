@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
 import themeImg from '../../images/theme-light-dark-1.svg'
 import { HeaderProps } from './Header.types';
 import Switch from 'react-switch';
+import HeaderController from './Header.controller';
 
 const Header = ({ theme, handleTheme }: HeaderProps) => {
+
+
+    const { scrollFunc } = HeaderController();
+
+
 
     return (
         <div className={styles.container}>
             <div className={styles.content}>
                 <div className={styles.logoContainer}>
-                    <Link to='/'>
+                    <Link to='/' onClick={scrollFunc}>
                         <p className={styles.logo}>Emdien</p>
                     </Link>
                     
