@@ -5,14 +5,11 @@ import placeholder from '../../../images/placeholder.jpg'
 
 
 export interface BlogData {
-    data: {
-        slug: string,
-        title: string,
-        intro: string,
-        date: string,
-        img: string,
-    },
-    content: string
+    slug: string,
+    title: string,
+    intro: string,
+    date: string,
+    img: string,
 }
 interface BlogCardProps {
     entryData: BlogData
@@ -21,7 +18,7 @@ interface BlogCardProps {
 const BlogCard = ({ entryData }: BlogCardProps) => {
     return (
         <div className={styles.container}>
-            <Link className={styles.content} to={"/entries/"+ entryData.data.slug}>
+            <Link className={styles.content} to={"/entries/"+ entryData.slug}>
                 <div className={styles.thumbnailContainer}>
                     {
                         // NOTE: Important to note that ideally the banner image is 300x150px to not reescale
@@ -30,9 +27,9 @@ const BlogCard = ({ entryData }: BlogCardProps) => {
                 </div>
                 <div className={styles.entryInfo}>
                     <div className={styles.infoContent}>
-                        <h2 className={styles.entryTitle}>{entryData.data.title}</h2>
-                        <h3 className={styles.entryDate}>{entryData.data.date}</h3>
-                        <p className={styles.entryIntro}>{entryData.data.intro}</p>
+                        <h2 className={styles.entryTitle}>{entryData.title}</h2>
+                        <h3 className={styles.entryDate}>{entryData.date}</h3>
+                        <p className={styles.entryIntro}>{entryData.intro}</p>
                     </div>
                 </div>
             </Link>

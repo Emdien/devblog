@@ -1,7 +1,10 @@
+import matter from "gray-matter";
+import { get } from "https";
 import React, { useEffect, useRef} from "react";
-import BlogCard from "./BlogCard/BlogCard";
+import BlogCard, { BlogData } from "./BlogCard/BlogCard";
 import CardListController from "./CardList.controller";
 import styles from './CardList.module.scss';
+
 
 
 interface CardListProps {
@@ -32,13 +35,16 @@ const CardList = ({ filter }: CardListProps) => {
             getMarkdownContents()
             loadEntries.current = false
         }
-    }, [])
+    }, [getMarkdownContents])
+
+    console.log(entries)
 
     return (
         <div className={styles.container}>
             <h2 className={styles.header}>Entradas del blog</h2>
 
-            {entries}
+            {//entries
+            }
 
             {
                 // NOTES: Here it should map an array of blog cards based on filtered titles
@@ -46,10 +52,15 @@ const CardList = ({ filter }: CardListProps) => {
                 // Need to implement pagination
             }
 
-            {// entries.map(entry => (
-             //   <></>
-            //))
+            <div className={styles.cards}>
+            { entries.length ?
+                entries.map(entry => (
+                    <BlogCard entryData={entry as BlogData} />
+                ))
+            :
+                    <></>
             }
+            </div>
 
         </div>
     );
