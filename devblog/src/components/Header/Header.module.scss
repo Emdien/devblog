@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     box-sizing: border-box;
-    font-family: 'Signika', sans-serif;
+    font-family: 'OpenSans', sans-serif;
     position: sticky;
     z-index: 5;
     top: 0;
@@ -35,13 +35,9 @@
 .logo {
     text-align: center;
     font-size: 48px;
-    transition: transform .2s ease-in-out;
     
 }
 
-.logo:hover {
-    transform: scale(1.03)
-}
 
 .hBlock {
     flex: 1 0 auto;

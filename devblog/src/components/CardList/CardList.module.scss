@@ -1,11 +1,11 @@
 .container {
     display: flex;
     width: 100%;
-    background-color: var(--content-level-3);
+    //background-color: var(--content-level-3);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px 0;
+    padding: 25px 0 0 0;
     transition: background 0.5s ease, color 0.5s ease;
 }
 

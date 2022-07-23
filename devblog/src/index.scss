@@ -1,15 +1,15 @@
 
 :root {
-    --background: #dedede;
+    --background: #white;
     --text-primary: black;
     --text-secondary: white;
     --header-footer: #212121;
     --body-content: white;
-    --content-level-1: #c4c4c4;
+    --content-level-1: white;
     --content-level-2: #cecece;
     --content-level-3: #d4d4d4;
     --search-underline: #909090;
-    --hover-bg: #909090; 
+    --hover-bg: #cecece; 
 }
 
 [data-theme='dark'] {
@@ -21,6 +21,6 @@
     --content-level-1: #171717;
     --content-level-2: #1a1a1a;
     --content-level-3: #1d1d1d;
-    --search-underline: #262626;
+    --search-underline: white;
     --hover-bg: #0c0c0c; 
-}    
+}

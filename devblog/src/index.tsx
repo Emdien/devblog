@@ -5,7 +5,7 @@ import './index.scss';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider, useDispatch } from 'react-redux'; 
 import rootReducer from './store/rootReducer';
-
+import './assets/fonts/static/OpenSans/OpenSans-Light.ttf'
 
 const store = configureStore({ reducer: rootReducer})
 export type AppDispatch = typeof store.dispatch
