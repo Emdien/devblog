@@ -1,26 +1,27 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface BlogEntry {
-    data: {
-        slug: string,
-        title: string,
-        intro: string,
-        date: string,
-        img: string,
-    },
-    content: string
+    slug: string,
+    title: string,
+    intro: string,
+    date: string,
+    img: string,
 }
 
 export interface BlogEntries {
-    entries: {[slug: string]: BlogEntry}
+    fetched: boolean,
+    entries: BlogEntry[]
 }
 
 export const getBlogEntriesSlice = createSlice({
     name: 'blog-entries',
-    initialState: {} as BlogEntries,
+    initialState: {fetched: false, entries: []} as BlogEntries,
     reducers: {
-        addEntry: (state, action: PayloadAction<{entry: BlogEntry}>) => {
-            state.entries[action.payload.entry.data.slug] = action.payload.entry
+        addEntry: (state, action: PayloadAction<BlogEntry>) => {
+            state.entries.push(action.payload)
+        },
+        setFetched: (state) => {
+            state.fetched = true
         }
     }
 });
