@@ -1,6 +1,5 @@
 import React, { Dispatch, SetStateAction } from 'react';
 import styles from './SearchBar.module.scss';
-import magGlass from '../../images/mag_glass.svg';
 
 interface SearchBarProps {
     searchText: string;

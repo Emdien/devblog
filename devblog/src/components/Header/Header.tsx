@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
-import themeImg from '../../images/theme-light-dark-1.svg'
 import { HeaderProps } from './Header.types';
 import Switch from 'react-switch';
 import HeaderController from './Header.controller';
