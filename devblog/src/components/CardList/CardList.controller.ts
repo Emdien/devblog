@@ -40,9 +40,12 @@ const CardListController = () => {
         }
     }, [dispatch, fetchStatus])
 
-    
+    const filterEntry = (entry: BlogEntry, filter: string) => {
+        if (entry.title.toLowerCase().includes(filter.toLowerCase())) return true;
+        return false
+    }
 
-    return { entrySet }
+    return { entrySet, filterEntry }
 }
 
 export default CardListController;

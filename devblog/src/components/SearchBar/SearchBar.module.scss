@@ -30,6 +30,9 @@
 
 }
 
+::placeholder {
+    color: var(--input-placeholder)
+}
 
 .searchInput:focus-visible, .searchInput:focus {
     outline: none;

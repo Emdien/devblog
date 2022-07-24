@@ -11,7 +11,7 @@ interface CardListProps {
 
 const CardList = ({ filter }: CardListProps) => {
 
-    const { entrySet } = CardListController();   
+    const { entrySet, filterEntry } = CardListController();   
 
     return (
         <div className={styles.container}>
@@ -24,7 +24,8 @@ const CardList = ({ filter }: CardListProps) => {
 
             <div className={styles.cards}>
             { entrySet ?
-                entrySet.map(entry => (
+                entrySet.filter(entry => filterEntry(entry, filter))
+                .map(entry => (
                     <BlogCard entryData={entry as BlogData} />
                 ))
             :
