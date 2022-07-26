@@ -1,10 +1,10 @@
 ---
-slug: Mock entry
+slug: mockEntry
 title: This is a mock entry for testing purposes
 intro: Gray-matter and its usages. Metadata transfer from markdown files to components
 date: 10 Jul 2022
 img: src de la imagen
-link: /entries/mock_entry 
+link: /entries/mockEntry
 ---
 
 # Mock header
