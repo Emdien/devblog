@@ -11,11 +11,11 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 
 const Home = () => {
 
-    const { avatar, searchText, setSearchText } = HomeController();
+    const { avatar, searchText, setSearchText, fetchStatus } = HomeController();
     
     return (
         <>
-            {avatar ? (
+            {fetchStatus ? (
                 <div className={styles.container}>
                     <HomeHeader avatar={avatar}/>
                     <SearchBar searchText={searchText} setSearchText={setSearchText} placeholder='Buscar entradas del blog'/>

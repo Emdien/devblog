@@ -4,6 +4,7 @@ const HomeController = () => {
 
     const [avatar, setAvatar] = useState("")
     const [ searchText, setSearchText ] = useState('');
+    const [ fetchStatus, setFetchStatus ] = useState(false)
 
     const fetchData = () => {
         return fetch('https://api.github.com/users/Emdien')
@@ -13,9 +14,10 @@ const HomeController = () => {
 
     useEffect(() => {
         fetchData()
+        .then(() => setFetchStatus(true))
     }, [])
 
-    return { avatar, searchText, setSearchText }
+    return { avatar, searchText, setSearchText, fetchStatus }
 }
 
 export default HomeController;
