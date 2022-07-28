@@ -1,12 +1,12 @@
 .container {
-    width: 382px;
+    max-width: 382px;
+    min-width: 350px;
     justify-self: center;
 }
 
 .content {
     display: grid;
-    //height: 400px;
-    grid-template-rows: 150px 200px;
+    grid-template-rows: 150px 220px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 'logo logo logo'
     'info info info';

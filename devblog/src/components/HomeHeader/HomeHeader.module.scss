@@ -101,3 +101,30 @@
     }
     
 }
+
+@media (max-width: 425px) {
+    .container {
+        grid-template-rows: 300px 800px;
+        grid-template-areas: 'logo logo logo'
+        'about about about';
+    }
+
+    .about {
+        margin: auto;
+    }
+
+    .aboutHeader {
+        text-align: center;
+    }
+
+    .logo {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .learnMore {
+        display: flex;
+        justify-content: center;
+    }
+}

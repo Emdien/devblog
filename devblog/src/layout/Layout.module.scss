@@ -53,3 +53,11 @@
     color: var(--text-primary);
 }
 
+
+@media (max-width: 425px) {
+
+  .bodyContent {
+    margin: 10px 32px;
+  }
+
+}
