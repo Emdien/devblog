@@ -4,14 +4,14 @@ import styles from './Blog.module.scss';
 
 const Blog = () => {
 
-    const { blogContent, blogImg } = BlogController();
+    const { blogContent, blogImg, fetchStatus } = BlogController();
 
     return (
         <>
-            {true ? (
+            {fetchStatus ? (
                 <div className={styles.container}>
                     <img className={styles.banner} src={blogImg} alt='Blog entry banner'/> 
-                    <div dangerouslySetInnerHTML={blogContent}/>
+                    <div className={styles.content} dangerouslySetInnerHTML={blogContent}/>
                 </div>
             ) : (
                 <></>
