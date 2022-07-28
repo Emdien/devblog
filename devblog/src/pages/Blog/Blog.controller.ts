@@ -13,7 +13,7 @@ const BlogController = () => {
 
     useEffect(() => {
         const file = `${slug}.md`;
-        import(`../../entries/${file}`)
+        import(`../../entries/${slug}/${file}`)
             .then(importedFile => {
                 return fetch(importedFile.default)
             })
@@ -26,7 +26,7 @@ const BlogController = () => {
             })
             .catch(err => console.log(err))
 
-        import(`../../images/${slug}_banner.jpg`)
+        import(`../../entries/${slug}/${slug}_banner.jpg`)
             .then(importedImage => {
                 return fetch(importedImage.default)
             })

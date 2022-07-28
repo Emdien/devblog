@@ -25,7 +25,10 @@ const CardListController = () => {
         const files = ['mockEntry.md', 'mockEntry2.md', 'mockEntry.md', 'mockEntry2.md', ];
         if(loadEntries.current && !fetchStatus){
             Promise.all(files.map((file) => {
-                return import(`../../entries/${file}`)
+
+                const slug = file.split('.md')[0]
+
+                return import(`../../entries/${slug}/${file}`)
                 .then(importedFile => {
                     return fetch(importedFile.default)
                 })
