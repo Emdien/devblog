@@ -22,6 +22,13 @@ export const getBlogEntriesSlice = createSlice({
         },
         setFetched: (state) => {
             state.fetched = true
+        },
+        sortEntries: (state) => {
+            state.entries.sort((a, b) => {
+                let dateA = new Date(a.date).getTime();
+                let dateB = new Date(b.date).getTime();
+                return dateB - dateA
+            })
         }
     }
 });

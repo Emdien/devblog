@@ -28,7 +28,7 @@ const BlogCard = ({ entryData }: BlogCardProps) => {
                 <div className={styles.entryInfo}>
                     <div className={styles.infoContent}>
                         <h2 className={styles.entryTitle}>{entryData.title}</h2>
-                        <h3 className={styles.entryDate}>{entryData.date}</h3>
+                        <h3 className={styles.entryDate}>{new Date(entryData.date).toLocaleDateString('en-GB', {day: '2-digit' ,month: 'short', year: 'numeric'})}</h3>
                         <p className={styles.entryIntro}>{entryData.intro}</p>
                     </div>
                 </div>

@@ -22,7 +22,7 @@ const CardListController = () => {
 
     const loadEntries = useRef(true);
     useEffect(() => {
-        const files = ['mockEntry.md', 'mockEntry2.md', 'mockEntry.md', 'mockEntry2.md', ];
+        const files = ['mockEntry.md', 'mockEntry2.md', ];
         if(loadEntries.current && !fetchStatus){
             Promise.all(files.map((file) => {
 
@@ -37,6 +37,10 @@ const CardListController = () => {
                 .then(res => dispatch(getBlogEntriesActions.addEntry(res as BlogEntry)))
                 .catch(err => console.log(err))
             }))
+            .then(() => {
+                dispatch(getBlogEntriesActions.sortEntries())  
+            })
+
             loadEntries.current = false
             dispatch(getBlogEntriesActions.setFetched())
 

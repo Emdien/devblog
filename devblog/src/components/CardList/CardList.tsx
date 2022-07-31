@@ -26,7 +26,7 @@ const CardList = ({ filter }: CardListProps) => {
             { entrySet ?
                 entrySet.filter(entry => filterEntry(entry, filter))
                 .map(entry => (
-                    <BlogCard entryData={entry as BlogData} />
+                    <BlogCard entryData={entry as BlogData} key={entry.slug + entry.date}/>
                 ))
             :
                     <></>
