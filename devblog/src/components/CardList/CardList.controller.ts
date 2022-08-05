@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getBlogEntriesActions } from "../../store/blogEntries";
 import { BlogEntry } from "../../store/blogEntries/getBlogEntries.slice";
 import { RootState } from "../../store/rootReducer";
+import files from '../../entries/fileList.json';
 window.Buffer = window.Buffer || require("buffer").Buffer;
 
 
@@ -22,13 +23,9 @@ const CardListController = () => {
 
     const loadEntries = useRef(true);
     useEffect(() => {
-        const files = ['mockEntry.md', 'mockEntry2.md', ];
         if(loadEntries.current && !fetchStatus){
             Promise.all(files.map((file) => {
-
-                const slug = file.split('.md')[0]
-
-                return import(`../../entries/${slug}/${file}`)
+                return import(`../../entries/${file}/${file}.md`)
                 .then(importedFile => {
                     return fetch(importedFile.default)
                 })
