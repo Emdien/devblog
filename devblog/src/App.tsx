@@ -4,6 +4,7 @@ import Home from './pages/Home/Home';
 import Layout from './layout/Layout';
 import NotFound from './pages/NotFound/NotFound';
 import Blog from './pages/Blog/Blog';
+import AboutMe from './pages/AboutMe/AboutMe';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='*' element={<NotFound />} />
-          <Route path='/aboutme' element={<></>} />
+          <Route path='/aboutme' element={<AboutMe />} />
           <Route path='/entries/:slug' element={<Blog />} />
         </Routes>
       </Layout>
