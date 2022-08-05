@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from './BlogCard.module.scss';
-import placeholder from '../../../images/placeholder.jpg'
 import green_poly from '../../../images/green_poly.png'
 import blue_poly from '../../../images/blue_poly.png'
 import yellow_poly from '../../../images/yellow_poly.png'
