@@ -1,6 +1,6 @@
 ---
 slug: mockEntry
-title: This is a mock entry for testing purposes
+title: This is a mock entry for testing purposes 1st
 intro: Gray-matter and its usages. Metadata transfer from markdown files to components
 date: '2022-07-10'
 img: green
