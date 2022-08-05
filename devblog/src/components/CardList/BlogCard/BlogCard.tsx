@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import BlogCardController from "./BlogCard.controller";
 import styles from './BlogCard.module.scss';
-import green_poly from '../../../images/green_poly.png'
-import blue_poly from '../../../images/blue_poly.png'
-import yellow_poly from '../../../images/yellow_poly.png'
+import { motion } from 'framer-motion'
 
 
 export interface BlogData {
@@ -18,15 +17,19 @@ interface BlogCardProps {
 }
 
 
-const banners: {[key: string]: string} = {
-    'green': green_poly,
-    'blue': blue_poly,
-    'yellow': yellow_poly
-}
 
 const BlogCard = ({ entryData }: BlogCardProps) => {
+
+    const { banners } = BlogCardController();
+
     return (
-        <div className={styles.container}>
+        <motion.div layout
+         className={styles.container}
+         animate={{ opacity: 1}}
+         initial={{ opacity: 0}}
+         exit={{ opacity: 0}}
+         transition={{ duration: 0.3 }}
+         >
             <Link className={styles.content} to={"/entries/"+ entryData.slug}>
                 <div className={styles.thumbnailContainer}>
                     <img className={styles.thumbnail} src={banners[entryData.img]} alt="entry banner" />
@@ -39,7 +42,7 @@ const BlogCard = ({ entryData }: BlogCardProps) => {
                     </div>
                 </div>
             </Link>
-        </div>
+        </motion.div>
     );
 };
 
