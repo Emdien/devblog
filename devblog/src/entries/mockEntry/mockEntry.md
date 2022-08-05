@@ -3,11 +3,9 @@ slug: mockEntry
 title: This is a mock entry for testing purposes
 intro: Gray-matter and its usages. Metadata transfer from markdown files to components
 date: '2022-07-10'
-img: src de la imagen
+img: green
 link: /entries/mockEntry
 ---
-
-# Making off de este devblog
 
 ## This is a h2
 

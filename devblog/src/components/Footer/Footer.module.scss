@@ -2,7 +2,7 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 100px;
+    height: 130px;
     background-color: var(--header-footer);
     display: flex;
     justify-content: center;
@@ -34,6 +34,11 @@
 
 .text {
     margin-bottom: 10px;
+
+    a {
+        text-decoration: none;
+        color: var(--text-secondary);
+    }
 }
 
 .socialGithub {

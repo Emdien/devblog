@@ -8,6 +8,9 @@ const Footer = () => {
                 <div className={styles.text}>
                     Designed by Gonzalo Nicolás Martínez - 2022
                 </div>
+                <div className={styles.text}>
+                <a href='https://www.freepik.com/vectors/low-poly'>Low poly vector banners created by starline - www.freepik.com</a>
+                </div>
                 <div className={styles.socials}>
                     <div className={styles.socialGithub}>
                         <a rel="noreferrer" href="https://github.com/Emdien" target="_blank">

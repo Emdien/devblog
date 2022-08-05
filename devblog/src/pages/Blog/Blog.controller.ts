@@ -27,7 +27,7 @@ const BlogController = () => {
                 })
                 .catch(err => console.log(err)),
 
-                import(`../../entries/${slug}/${slug}_banner.jpg`)
+                import(`../../entries/${slug}/${slug}_banner.png`)
                     .then(importedImage => {
                         return fetch(importedImage.default)
                     })
